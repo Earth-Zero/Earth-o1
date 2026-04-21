@@ -5,10 +5,10 @@
 
   <meta charset="utf-8">
   <meta name="description"
-    content="Earth-o1: A Purely Observations-driven Atmospheric Foundation Model">
+    content="Earth-0: A Purely Observations-driven Atmospheric Foundation Model">
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Earth-o1: A Purely Observations-driven Atmospheric Foundation Model.</title>
+  <title>Earth-0: A Purely Observations-driven Atmospheric Foundation Model.</title>
 
   <!--   Global site tag (gtag.js) - Google Analytics-->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y5ZVQZ7NHC"></script>
@@ -491,14 +491,8 @@
       </div>
       <!-- <h2 class="title is-3 has-text-centered" style="margin-bottom: 1rem;">Overview of ArtiMuse</h2> 新增标题 -->
       <div class="hero-body">
-        <p style="margin-top: 0;">
-          The growing abundance of multi-source atmospheric observations provides unprecedented opportunities for real-time weather prediction and monitoring.
-          Data assimilation, the primary framework for integrating these diverse observations by incorporating them into the model space, currently exploits only a fraction of available observations.
-          Moreover, constrained by numerical model deficiencies, it can fall short of simple extrapolation in short-term hazard detection.
-          Here, we present an Observations-driven Atmospheric Foundation Models Earth-0, a next-generation, AI-based platform founded on a unified multimodal representation space that integrates diverse observational streams from satellites (both geostationary instruments, polar orbiters), and in situ networks.
-          Within this space, Earth-0 learns the intrinsic dynamics of atmospheric evolution and supports flexible, arbitrary-resolution, multi-model, and multi-product forecasting and retrieval, enabling natural coupling across Earth subsystems.
-          The Earth-0 delivers real-time atmospheric forecasts, high-resolution hazard monitoring, and cross-sensor retrieval products, while offering more diverse and timely diagnostic variables than ERA5 reanalysis.
-          This framework represents a step toward a living, closed-loop digital mirror of Earth, transforming heterogeneous observations into actionable intelligence for science and decision-making.
+        <p style="margin-top: 0; text-align: justify; line-height: 1.8;">
+          The growing abundance of multi-source atmospheric observations provides unprecedented opportunities for real-time weather prediction and monitoring. Data assimilation (DA), the primary framework for integrating these diverse observations by incorporating them into the model space, currently exploits only a fraction of available observations. Similarly, forecast models initialized with DA initial fields are constrained by fixed grids, which further impairs the reconstruction and short-term prediction of local hazard. Here, we present a purely observation-driven atmospheric world model (<b>Earth-o1</b>), a next-generation, AI-based platform founded on a unified multimodal latent observation space that integrates diverse observational streams from satellites (both geostationary instruments and polar orbiters), and in-situ networks. Within this space, Earth-o1 learns the intrinsic dynamics of atmospheric evolution and supports flexible, arbitrary-resolution, multi-model, and multi-product forecasting and retrieval, enabling natural coupling across Earth subsystems. Earth-o1 delivers real-time atmospheric forecasts, high-resolution hazard monitoring, and cross-sensor retrieval products, while providing more diverse and timely diagnostic variables than ERA5 reanalysis and achieving forecast accuracy for surface in-situ observations comparable to IFS. This framework represents a step toward a living, closed-loop digital mirror of Earth, transforming heterogeneous observations into actionable intelligence for science and decision-making.
         </p>
       </div>
     </div>
@@ -515,16 +509,20 @@
           -webkit-text-fill-color: transparent;
           font-weight: 700;
         ">
-        Overview of Earth-0
+        Overview of Earth-o1
       </h2>
       <!-- 底部分割线 -->
       <div style="width: 60px; height: 3px; background-color: #60a5fa; margin: 0 auto 1.5rem auto; border-radius: 2px;">
       </div>
       <!-- <h2 class="title is-3 has-text-centered" style="margin-bottom: 1rem;">Overview of ArtiMuse</h2> 新增标题 -->
       <div class="hero-body">
-        <img src="assets/artimuse/images/paper/fh-fig1_1.png" style="width:100%; margin-bottom:10px" alt="Teaser." />
+        <img src="assets/artimuse/images/paper/Fig.1.jpg" style="width:100%; margin-bottom:10px" alt="Teaser." />
         <p style="margin-top: 0;">
-          <b>Overview of Earth-0</b>.
+          <b>Overview of Earth-o1.</b>
+          After tokenization, multi-modal heterogeneous data from LEOs, GEOs and in-situ platforms are trained via a Masked Autoencoder, where representations are mutually integrated to generate modality observation tokens.
+          <b>Analysis:</b> these latent observation tokens support multi-sensor analysis tasks including microwave and infrared remote sensing.
+          <b>Forecast:</b> facilitate the forecasting of observation signals.
+          <b>Inversion:</b> enable the inversion of downstream geophysical products; as illustrated in the figure, high-value products such as sea ice concentration and CO concentration are inverted.
         </p>
       </div>
     </div>
